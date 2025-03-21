@@ -1,4 +1,4 @@
-package com.raji.email.ui.theme
+package com.raji.core_ui.theme
 
 import androidx.compose.ui.graphics.Color
 

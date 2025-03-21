@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">E-mail</string>
+    <string name="accessibility_email">Accessibitlity\n</string>
 </resources>

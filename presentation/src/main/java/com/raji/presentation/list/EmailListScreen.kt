@@ -5,17 +5,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import com.raji.core_ui.component.EmailItem
 import com.raji.core_ui.component.FullScreenError
 import com.raji.core_ui.component.LinearFullScreenProgress
 import com.raji.core_ui.functional.toformattedDate
-import com.raji.domain.model.emaillist.EmailListItemModel
 
 @Composable
 fun EmailListScreen(

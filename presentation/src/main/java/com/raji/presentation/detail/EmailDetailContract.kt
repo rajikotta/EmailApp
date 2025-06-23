@@ -9,7 +9,7 @@ import com.raji.presentation.detail.EmailDetailContract.EmailDetailsEvent
 sealed interface EmailDetailContract :
     MVIContract<DetailUiState, EmailDetailsEffect, EmailDetailsEvent> {
     data class DetailUiState(
-        val loading: Boolean = false,
+        val loading: Boolean = true,
         val emailDetail: EmailDetailsModel? = null,
         val isError: Boolean =false
     )

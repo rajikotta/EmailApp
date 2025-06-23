@@ -37,6 +37,8 @@ kotlinxCoroutinesTest = "1.9.0-RC.2"
 mockk = "1.13.12"
 mockkAndroid = "1.12.0"
 uiTestManifest = "1.7.5"
+coreKtxVersion = "1.16.0"
+navigationTestingAndroid = "2.9.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -80,6 +82,8 @@ androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "j
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "uiTestManifest" }
 turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtxVersion" }
+androidx-navigation-testing-android = { group = "androidx.navigation", name = "navigation-testing-android", version.ref = "navigationTestingAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

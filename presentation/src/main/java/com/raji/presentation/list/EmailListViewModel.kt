@@ -50,7 +50,6 @@ class EmailListViewModel @Inject constructor(private val emailListUseCase: Email
             }
 
             EmailListContract.EmailListEvent.LoadEmailList -> {
-//                updateState(EmailListContract.EmailListState.Loading)
                 loadEmail()
             }
         }

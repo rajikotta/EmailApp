@@ -37,7 +37,7 @@ fun EmailItem(
 ) {
 
 
-    ConstraintLayout(modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp)) {
+    ConstraintLayout(modifier = modifier.fillMaxWidth().padding(vertical = 8.dp)) {
         val (avatar, from, subject, snippet, time, star) = createRefs()
 
 
@@ -93,8 +93,9 @@ fun EmailItem(
                 width = Dimension.fillToConstraints
             },
             fontWeight = FontWeight.Normal,
-            fontSize = 14.sp,
+            fontSize = 12.sp,
             maxLines = 2,
+            lineHeight = 12.sp,
             overflow = TextOverflow.Ellipsis
         )
 

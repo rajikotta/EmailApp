@@ -32,7 +32,6 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
-import androidx.hilt.navigation.compose.hiltViewModel
 import com.raji.core_ui.component.EmailDetailsBottomSheet
 import com.raji.core_ui.component.EmailDetailsSenderInfo
 import com.raji.core_ui.component.EmailDetailsSubject
@@ -42,7 +41,6 @@ import com.raji.domain.model.emaildetails.EmailDetailsModel
 
 @Composable
 fun EmailDetailsScreen(
-    viewModel: EmailDetailViewModel = hiltViewModel<EmailDetailViewModel>(),
     from: String,
     profileImage: String?,
     subject: String,

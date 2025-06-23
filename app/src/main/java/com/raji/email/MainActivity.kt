@@ -97,7 +97,12 @@ class MainActivity : ComponentActivity() {
                                         }
                                     }
 
-                                    TopAppBarState.DETAILS -> DetailsAppBar(navController = navController)
+                                    TopAppBarState.DETAILS -> DetailsAppBar(
+                                        navController = navController,
+                                        modifier = Modifier.windowInsetsPadding(
+                                            WindowInsets.statusBars
+                                        )
+                                    )
                                 }
                             },
                             bottomBar = {

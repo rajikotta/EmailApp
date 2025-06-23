@@ -44,6 +44,8 @@ fun EmailTheme(
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
+    val view = LocalView.current
+
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
@@ -53,6 +55,14 @@ fun EmailTheme(
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
+
+//    if (!view.isInEditMode) {
+//        SideEffect {
+//            val window = (view.context as Activity).window
+//            window.statusBarColor = colorScheme.surface.toArgb()
+//            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme
+//        }
+//    }
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,

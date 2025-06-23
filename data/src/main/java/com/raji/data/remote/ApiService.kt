@@ -9,6 +9,6 @@ interface ApiService {
     @GET("emaillist")
     suspend fun getEmailList(): Response<List<EmailListItemDto>>
 
-    @GET("api/v1/emaildetails")
+    @GET("emaildetail")
     suspend fun getEmailDetail(): Response<List<EmailDetailsDto>>
 }

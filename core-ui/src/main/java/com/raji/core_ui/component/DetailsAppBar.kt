@@ -45,7 +45,7 @@ fun DetailsAppBar(modifier: Modifier = Modifier, navController: NavController) {
 
 
 
-    Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+    Row(modifier = modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
         IconButton(onClick = {}) {
             Icon(
                 Icons.Default.ArrowBackIosNew,

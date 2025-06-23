@@ -17,7 +17,7 @@ fun String.getInitials(): String {
 }
 
 fun String.toformattedDate(): String {
-    val input = SimpleDateFormat("yyyy-MM-dd 'T' HH:mm:ss 'Z'", Locale.getDefault())
+    val input = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
     input.timeZone = TimeZone.getTimeZone("UTC")
     val output = SimpleDateFormat("MMM dd", Locale.getDefault())
     return try {

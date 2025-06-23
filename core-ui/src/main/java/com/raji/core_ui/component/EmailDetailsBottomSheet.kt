@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.Reply
 import androidx.compose.material.icons.automirrored.filled.Shortcut
 import androidx.compose.material.icons.automirrored.outlined.OpenInNew
 import androidx.compose.material.icons.filled.ArrowDropDown
@@ -26,8 +27,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-
+@Preview(showBackground = true)
 @Composable
 fun EmailDetailsBottomSheet(modifier: Modifier = Modifier, inReplyMode: Boolean = false) {
     Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically) {
@@ -71,6 +73,10 @@ fun EmailDetailsBottomSheet(modifier: Modifier = Modifier, inReplyMode: Boolean 
 
 }
 
+
+
+
+@Preview
 @Composable
 fun ReplyBar() {
     Row(verticalAlignment = Alignment.CenterVertically) {
@@ -82,7 +88,7 @@ fun ReplyBar() {
                 .size(24.dp)
         ) {
             Icon(
-                imageVector = Icons.AutoMirrored.Default.Shortcut,
+                imageVector = Icons.AutoMirrored.Default.Reply,
                 contentDescription = null,
                 modifier = Modifier.size(24.dp)
             )
@@ -112,6 +118,7 @@ fun ReplyBar() {
 
 }
 
+@Preview
 @Composable
 fun ReplyBarWithInput() {
 

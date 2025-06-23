@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.android.junit)
+
 }
 
 android {
@@ -42,7 +44,6 @@ implementation(project(":core"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    testImplementation(libs.junit)
 
     implementation(libs.retrofit)
     implementation(libs.logging.interceptor)
@@ -51,7 +52,5 @@ implementation(project(":core"))
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
 
-
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation(libs.bundles.unittest)
 }

@@ -3,6 +3,9 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.screenshot)
+    alias(libs.plugins.android.junit)
+    alias(libs.plugins.hilt.android)
 
 }
 
@@ -39,6 +42,8 @@ android {
     composeOptions{
         kotlinCompilerExtensionVersion = "1.5.3"
     }
+    experimentalProperties["android.experimental.enableScreenshotTest"] = true
+
 }
 
 dependencies {
@@ -54,8 +59,9 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.hilt.navigation.compose)
-
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation(libs.bundles.unittest)
+    androidTestImplementation(libs.bundles.androidtest)
+    testImplementation(libs.turbine)
+//    screenshotTestImplementation(libs.androidx.compose.ui.tooling)
+    debugImplementation(libs.ui.test.manifest)
 }

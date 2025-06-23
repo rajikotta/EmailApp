@@ -25,8 +25,7 @@ import com.raji.core_ui.R
 @Composable
 fun HomeAppBar(modifier: Modifier = Modifier, onMenuItemClick: () -> Unit) {
     Row(
-        modifier = Modifier
-            .windowInsetsPadding(WindowInsets.statusBars)
+        modifier = modifier
             .fillMaxWidth()
             .padding(vertical = 8.dp, horizontal = 16.dp)
             .height(64.dp)
